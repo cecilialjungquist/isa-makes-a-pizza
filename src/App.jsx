@@ -14,7 +14,7 @@ function App() {
         <Outlet />
       </main>
       <footer>
-        <h4>This is a footer</h4>
+        <h4>made with love - 2023</h4>
       </footer>
     </>
   )

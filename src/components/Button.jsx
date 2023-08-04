@@ -1,18 +1,18 @@
-import { useNavigate } from "react-router";
-
-function Button({ children, warning, confirm, navigateTo }) {
-    const navigate = useNavigate();
+function Button({ children, warning, confirm, handleClick }) {
+    let className = 'default';
 
     if (warning && confirm) {
         throw new Error('Button can only be of type "warning" OR "confirm".');
     }
 
-    if (typeof navigateTo !== 'string') {
-        console.log('must be a string!')
+    if (warning) {
+        className = 'warning';
+    } else if (confirm) {
+        className = 'confirm';
     }
 
     return (  
-        <button className='confirm' onClick={() => navigate(`/${navigateTo}`)}>{ children }</button>
+        <button className={className} onClick={handleClick}>{ children }</button>
     );
 }
 
