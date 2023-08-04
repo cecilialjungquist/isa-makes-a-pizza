@@ -4,21 +4,24 @@ import { useEffect, useState } from "react";
 
 function StepFour() {
     const [startTimer, setStartTimer] = useState(false);
-    const [minutes, setMinutes] = useState(20)
+    const [minutes, setMinutes] = useState(3)
     const [seconds, setSeconds] = useState(0)
-    // const navigate = useNavigate();
+    const deadline = Date.now() + 2 * 60 * 1000;
 
-    // useEffect(() => {
-    //     const timer = setInterval(() => {
-    //        setMinutes(minutes - 1)
-    //         console.log(minutes);
+    useEffect(() => {
+        const timer = setInterval(() => {
+            let time = deadline - Date.now();
 
-    //         if (minutes < 1 && seconds < 1) {
-    //             return clearInterval(timer);
-    //         }
+            // Nåt blir fel
+            setMinutes(Math.floor(( time / 1000 / 60 ) % 60));
+            setSeconds(Math.floor(( time / 1000 ) % 60));
 
-    //     }, 1000);
-    // })
+            if (minutes < 1 && seconds < 1) {
+                return clearInterval(timer);
+            }
+
+        }, 1000);
+    }, []);
 
     return (
         <section>
@@ -26,7 +29,7 @@ function StepFour() {
             <h1>The Bake</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, nemo tempora. Eum quis animi odio id modi voluptatem et necessitatibus porro fugiat numquam pariatur nulla, rerum maxime quam. Harum, praesentium!</p>
             <section className="button-container">
-                { startTimer ?
+                {startTimer ?
                     <div className="timer">
                         <div className="minutes">{minutes}</div>:<div className="seconds">{seconds}</div>
                     </div> :
