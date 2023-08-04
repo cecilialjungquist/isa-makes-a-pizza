@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Patrick+Hand&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Patrick Hand', cursive; */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #cde8d7;
+}
+
+#root {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+h1, h2, h3, h4, p {
+  color: rgb(16, 70, 16);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+section {
+  padding: 2rem;
+  min-height: 60vh;
+}
+
+
+p {
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+button {
+  appearance: none;
+  border: none;
+  padding: 1rem 2.2rem;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+  border: 2px solid;
+  /* text-transform: uppercase; */
+  font-size: 1.2rem;
+}
+
+button.confirm {
+  background-color: #ffc2c2; 
+  border-color: #924646;
+  color: #431414;
+}
