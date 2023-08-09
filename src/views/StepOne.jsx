@@ -11,11 +11,15 @@ function StepOne() {
             <h3>STEP 1</h3>
             <h1>The Big Question</h1>
             {isReady ?
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, laboriosam.</p> :
+                <>
+                    <p>For Isa, who is a man without any planning skills, this step is a tricky one - so it might be tough for you as well!
+                        You'll need to do some thinking and really focus... You'll need to answer the big question:</p>
+                    <p>Are you starting to feel hungry yet?</p>
+                </> :
                 <p>Ok, just click "Yes!" whenever you're ready!</p>
             }
             <section className="button-container">
-                { isReady &&    
+                {isReady &&
                     <Button warning handleClick={() => setIsReady(false)}>Nah, not yet!</Button>
                 }
                 <Button handleClick={() => navigate('/step-two')}>Yes!</Button>

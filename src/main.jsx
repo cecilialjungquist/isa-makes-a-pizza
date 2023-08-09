@@ -12,6 +12,8 @@ import Page404 from './views/Page404.jsx';
 import './index.css';
 import StepThree from './views/StepThree.jsx';
 import StepFour from './views/StepFour.jsx';
+import StepFive from './views/StepFive.jsx';
+import StepSix from './views/StepSix.jsx';
 
 const router = createHashRouter([
   {
@@ -37,6 +39,14 @@ const router = createHashRouter([
       {
         path: 'step-four',
         element: <StepFour />
+      },
+      {
+        path: 'step-five',
+        element: <StepFive />
+      },
+      {
+        path: 'step-six',
+        element: <StepSix />
       },
       {
         path: '*',

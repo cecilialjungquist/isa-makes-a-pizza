@@ -4,39 +4,56 @@ import { useEffect, useState } from "react";
 
 function StepFour() {
     const [startTimer, setStartTimer] = useState(false);
-    const [minutes, setMinutes] = useState(3)
-    const [seconds, setSeconds] = useState(0)
-    const deadline = Date.now() + 2 * 60 * 1000;
+    const [minutes, setMinutes] = useState(20);
+    const [seconds, setSeconds] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            let time = deadline - Date.now();
+        if (startTimer) {
+            console.log(startTimer)
+            // ettan ska vara 20 sen
+            const deadline = Date.now() + .3 * 60 * 1000;
+            const timer = setInterval(() => {
 
-            // Nåt blir fel
-            setMinutes(Math.floor(( time / 1000 / 60 ) % 60));
-            setSeconds(Math.floor(( time / 1000 ) % 60));
+                let time = deadline - Date.now();
 
-            if (minutes < 1 && seconds < 1) {
-                return clearInterval(timer);
-            }
+                setMinutes(Math.floor((time / 1000 / 60) % 60));
+                setSeconds(Math.floor((time / 1000) % 60));
+    
+                if (time < 1) {
+                    setMinutes(0);
+                    setSeconds(0);
+                    navigate('/step-five');
+                    return clearInterval(timer);
+                }
 
-        }, 1000);
-    }, []);
+            }, 1000);
+        }
+
+    }, [startTimer]);
+
+    function toggleTimer() {
+        setStartTimer(true);
+    }
 
     return (
         <section>
             <h3>STEP 4</h3>
             <h1>The Bake</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, nemo tempora. Eum quis animi odio id modi voluptatem et necessitatibus porro fugiat numquam pariatur nulla, rerum maxime quam. Harum, praesentium!</p>
+            <p>Ok, so here we go! This is where most people (Isa included) will be very confused. You are now about to PUT your Billy's in the OVEN!
+                I know - crazy, right?! We are NOT using the microwave. (If you're not standing in the kitchen, now will be the time to walk over there.)</p>
+            <ul>
+                <li><span>- First -</span>Take your Billy's out of it's package. I understand that this is very hard to do, since it is different from your regular Billy's routine, but with practice comes skill.</li>
+                <li><span>- Second -</span>Open the oven and put the Billy's inside, on the oven rack. Be carful not to burn yourself!</li>
+                <li><span>- Third -</span>Close the oven and start the timer below.</li>
+            </ul>
             <section className="button-container">
                 {startTimer ?
                     <div className="timer">
                         <div className="minutes">{minutes}</div>:<div className="seconds">{seconds}</div>
                     </div> :
-                    <Button handleClick={() => setStartTimer(true)}>Start timer!</Button>
+                    <Button handleClick={toggleTimer}>Start timer!</Button>
                 }
-                {/* <Button warning handleClick={() => setIsReady(false)}>No, too hard!</Button>
-                <Button handleClick={() => navigate('/step-three')}>Ok, I did it!</Button> */}
             </section>
         </section>
     );

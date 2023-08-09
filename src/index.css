@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&display=swap');
 
 /* font-family: 'Open Sans', sans-serif;
 font-family: 'Patrick Hand', cursive; */
@@ -9,6 +9,8 @@ font-family: 'Patrick Hand', cursive; */
   padding: 0;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  font-weight: 400;
 }
 
 body {
@@ -24,13 +26,19 @@ body {
   padding: 2rem;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, li {
   color: rgb(16, 70, 16);
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+h1 span {
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -44,13 +52,25 @@ h4 {
 
 section {
   padding: 2rem;
-  min-height: 60vh;
 }
 
 
-p {
+p, li {
   max-width: 40rem;
   padding: 1rem;
+  line-height: 160%;
+}
+
+li span {
+  display: block;
+  font-weight: 700;
+}
+
+p.bold {
+  font-weight: 700;
+}
+p.italic {
+  font-style: italic;
 }
 
 button,
@@ -96,4 +116,21 @@ button:hover {
   display: grid;
   grid-template-columns: 4rem 2rem 4rem;
   font-size: 2rem;
+}
+
+.alert {
+  font-weight: 700;
+  color: red;
+  animation: alert 500ms ease-in 0ms infinite alternate-reverse;
+}
+
+@keyframes alert {
+  from { 
+    opacity: 0;
+    scale: 1;
+  }
+  to { 
+    opacity: 1; 
+    scale: 1.4;
+  }
 }
