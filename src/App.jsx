@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <header>
-        <h2>sometexthere</h2>
+        <h2 className='italic small'><Link to='/'>- isamakesapizza -</Link></h2>
       </header>
       <main>
         <Outlet />

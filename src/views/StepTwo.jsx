@@ -9,11 +9,11 @@ function StepTwo() {
     return (
         <section>
             <h3>STEP 2</h3>
-            <h1>The Rise Up</h1>
+            <h1>The Getting Up</h1>
             {isReady ?
                 <>
                     <p>If you are a little lazy, just as Isa, you might be a bit intimidated by this step.
-                        To rise up from a sitting or laying down position can be hard - but I know you can do it!
+                        To get up from a sitting or laying down position can be hard - but I know you can do it!
                         Once you're standing up, walk over to the kitchen and set the oven to 150°C.</p>
                     <p>Did you do it?</p>
                 </> :

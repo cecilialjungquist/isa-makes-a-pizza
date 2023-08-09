@@ -14,8 +14,8 @@ function StepThree() {
                 <>
                     <p>Hey, nicely done! You now have some well deserved rest ahead of you.
                         This step may vary in time depending on your oven (around 15-20 min), but just relax and enjoy the time off.
-                        To make the perfect Billy's pizza is a form of art, and good art takes time to accomplish!</p>
-                        <p>As soon as your oven reached 150°C and you're well rested - are you ready to keep going?</p>
+                        To make the perfect Billys pizza is a form of art, and good art takes time to accomplish!</p>
+                        <p>As soon as your oven has reached 150°C and you're well rested - are you ready to keep going?</p>
                 </> :
                 <p>Patience, young padawan! Soon, ready, the oven will be.</p>
             }

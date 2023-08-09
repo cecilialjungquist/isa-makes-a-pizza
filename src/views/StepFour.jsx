@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { useEffect, useState } from "react";
 
@@ -10,9 +10,8 @@ function StepFour() {
 
     useEffect(() => {
         if (startTimer) {
-            console.log(startTimer)
-            // ettan ska vara 20 sen
-            const deadline = Date.now() + .3 * 60 * 1000;
+
+            const deadline = Date.now() + 20 * 60 * 1000;
             const timer = setInterval(() => {
 
                 let time = deadline - Date.now();
@@ -40,11 +39,11 @@ function StepFour() {
         <section>
             <h3>STEP 4</h3>
             <h1>The Bake</h1>
-            <p>Ok, so here we go! This is where most people (Isa included) will be very confused. You are now about to PUT your Billy's in the OVEN!
+            <p>Ok, so here we go! This is where most people (Isa included) will be very confused. You are now about to PUT your Billys in the OVEN!
                 I know - crazy, right?! We are NOT using the microwave. (If you're not standing in the kitchen, now will be the time to walk over there.)</p>
             <ul>
-                <li><span>- First -</span>Take your Billy's out of it's package. I understand that this is very hard to do, since it is different from your regular Billy's routine, but with practice comes skill.</li>
-                <li><span>- Second -</span>Open the oven and put the Billy's inside, on the oven rack. Be carful not to burn yourself!</li>
+                <li><span>- First -</span>Take your Billys out of it's package. I understand that this is very hard to do, since it is different from your regular Billys routine, but with practice comes skill.</li>
+                <li><span>- Second -</span>Open the oven and put the Billys inside, on the oven rack. Be carful not to burn yourself!</li>
                 <li><span>- Third -</span>Close the oven and start the timer below.</li>
             </ul>
             <section className="button-container">
@@ -55,6 +54,7 @@ function StepFour() {
                     <Button handleClick={toggleTimer}>Start timer!</Button>
                 }
             </section>
+            <p className="small italic">You're welcome to use a different timer if you'd prefer! Just <Link to='/step-five'>click here</Link> when the timer finishes!</p>
         </section>
     );
 }

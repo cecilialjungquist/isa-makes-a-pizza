@@ -14,7 +14,7 @@ font-family: 'Patrick Hand', cursive; */
 }
 
 body {
-  background-color: #cde8d7;
+  background-image: linear-gradient(#cde8d7 70%, #8ac19f);
 }
 
 #root {
@@ -50,6 +50,14 @@ h4 {
   font-size: .8rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  opacity: .4;
+}
+
 section {
   padding: 2rem;
 }
@@ -77,12 +85,16 @@ li span {
 p.bold {
   font-weight: 700;
 }
-p.italic {
-  font-style: italic;
-}
 
 .landing-page p {
   padding: .5rem;
+}
+
+.italic {
+  font-style: italic;
+}
+.small {
+  font-size: .8rem;
 }
 
 button,
