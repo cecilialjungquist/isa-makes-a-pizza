@@ -54,6 +54,14 @@ section {
   padding: 2rem;
 }
 
+img {
+  width: 100%;
+}
+
+figure {
+  max-width: 30rem;
+  margin: auto;
+}
 
 p, li {
   max-width: 40rem;
@@ -71,6 +79,10 @@ p.bold {
 }
 p.italic {
   font-style: italic;
+}
+
+.landing-page p {
+  padding: .5rem;
 }
 
 button,
