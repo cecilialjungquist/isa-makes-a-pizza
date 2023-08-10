@@ -1,7 +1,14 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
+  let pathname = useParams();
+
+  // Scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>

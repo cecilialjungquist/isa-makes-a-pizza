@@ -20,9 +20,12 @@ function StepFour() {
                 setSeconds(Math.floor((time / 1000) % 60));
     
                 if (time < 1) {
+                    // Omdirigerar inte när timern går ut?
+                    console.log('Timer finished');
+                    navigate('/step-five');
+                    console.log('Navigate called.')
                     setMinutes(0);
                     setSeconds(0);
-                    navigate('/step-five');
                     return clearInterval(timer);
                 }
 
@@ -54,7 +57,7 @@ function StepFour() {
                     <Button handleClick={toggleTimer}>Start timer!</Button>
                 }
             </section>
-            <p className="small italic">You're welcome to use a different timer if you'd prefer! Just <Link to='/step-five'>click here</Link> when the timer finishes!</p>
+            <p className="small italic">You're welcome to use a different timer if you'd prefer. Set the timer to 20 min and <Link to='/step-five'>click here</Link> when it finishes!</p>
         </section>
     );
 }
