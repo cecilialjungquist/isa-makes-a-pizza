@@ -39,7 +39,7 @@ function StepFour() {
         <section>
             <h3>STEP 4</h3>
             <h1>The Bake</h1>
-            <p>Ok, so here we go! This is where most people (Isa included) will be very confused. You are now about to PUT your Billys in the OVEN!
+            <p>Ok, so here we go! This is where most people (Isa included) gets confused. You are now about to PUT your Billys in the OVEN!
                 I know - crazy, right?! We are NOT using the microwave. (If you're not standing in the kitchen, now will be the time to walk over there.)</p>
             <ul>
                 <li><span>- First -</span>Take your Billys out of it's package. I understand that this is very hard to do, since it is different from your regular Billys routine, but with practice comes skill.</li>

@@ -10,6 +10,7 @@ function StepFive() {
             <h3>STEP 5</h3>
             <h1>The Alert</h1>
             <h2 className="alert">!!! TIMER FINISHED !!!</h2>
+            <h3 className="alert">00:00</h3>
             <p>Take you Billys out of the oven right now! No time to lose!</p>
             <section className="button-container">
                 <Button handleClick={() => navigate('/step-six')}>I did it!</Button>

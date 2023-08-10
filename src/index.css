@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&family=Rock+Salt&display=swap');
 
 /* font-family: 'Open Sans', sans-serif;
-font-family: 'Patrick Hand', cursive; */
+font-family: 'Patrick Hand', cursive;
+font-family: 'Rock Salt', cursive; */
 
 * {
   box-sizing: border-box;
@@ -14,7 +15,8 @@ font-family: 'Patrick Hand', cursive; */
 }
 
 body {
-  background-image: linear-gradient(#cde8d7 70%, #8ac19f);
+  /* background-image: linear-gradient(#cde8d7 70%, rgb(138, 193, 145)); */
+  background-image: linear-gradient(#cfcde8, rgb(162, 170, 163));
 }
 
 #root {
@@ -23,17 +25,54 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem;
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #cfcde8;
+  position: relative;
 }
 
-h1, h2, h3, h4, p, li {
+h1,
+h2,
+h3,
+h4,
+p,
+li {
   color: rgb(16, 70, 16);
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  background: rgb(29, 29, 29);
+  color: whitesmoke;
+  width: fit-content;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border: 5px rgb(109, 64, 16) solid;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3), inset 0px 0px 8px black;
   font-weight: 700;
+  font-family: 'Rock Salt', cursive;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0);
+}
+
+.landing-page h1 {
+  border: none;
+  background: none;
+  box-shadow: none;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  color: rgb(16, 70, 16);
+  font-size: 3.5rem;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
+
+.landing-page h3 {
+  border-bottom: 2px solid rgb(16, 70, 16);
+  padding: 0 2rem 1rem;
+  width: fit-content;
+  margin: auto;
 }
 
 h1 span {
@@ -48,12 +87,18 @@ h2 {
 h4 {
   font-style: italic;
   font-size: .8rem;
+  /* font-family: 'Rock Salt', cursive; */
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
+
+a.home-link {
+  font-family: 'Rock Salt', cursive;
+}
+
 a:hover {
   opacity: .4;
 }
@@ -68,10 +113,11 @@ img {
 
 figure {
   max-width: 30rem;
-  margin: auto;
+  margin: 0 auto 2rem;
 }
 
-p, li {
+p,
+li {
   max-width: 40rem;
   padding: 1rem;
   line-height: 160%;
@@ -93,6 +139,7 @@ p.bold {
 .italic {
   font-style: italic;
 }
+
 .small {
   font-size: .8rem;
 }
@@ -111,17 +158,17 @@ button,
 
 button.default,
 .timer {
-  background-color: #feffdd; 
+  background-color: #feffdd;
   color: #0a0d67;
 }
 
 button.confirm {
-  background-color: #dec2ff; 
+  background-color: #dec2ff;
   color: #431414;
 }
 
 button.warning {
-  background-color: #fecbca; 
+  background-color: #fecbca;
   color: #431414;
 }
 
@@ -149,12 +196,23 @@ button:hover {
 }
 
 @keyframes alert {
-  from { 
+  from {
     opacity: 0;
     scale: 1;
   }
-  to { 
-    opacity: 1; 
+
+  to {
+    opacity: 1;
     scale: 1.4;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

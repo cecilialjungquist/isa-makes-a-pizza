@@ -8,10 +8,11 @@ function LandingPage() {
     
     return (  
         <section className="landing-page">
-            <h1><span>Welcome to <br/></span>Isa Makes A Pizza!</h1>
+            <h3>WELCOME TO</h3>
+            <h1>Isa Makes A Pizza!</h1>
 
             <figure>
-               <img src="/src/assets/isabilly.jpg" alt="" />
+               <img src="/src/assets/billys.svg" alt="Billys pizza." />
             </figure>            
 
             <p>Are you into driving different cars every week? Are those often of brands who are completely uninteresting (for example Fiat)?</p>
@@ -19,7 +20,7 @@ function LandingPage() {
                 <p>Do you hate super cute video games that is impossible to hate for everyone else (like Stardew Valley)?</p>
                 <p>Is Billys pizza a common lunch for you, often heated in the microwave because you lack skills of both patience and planning (not unlike a 6 year old kid)?</p>
 
-            <p className="bold">Then you are just like our friend Isa, and this quide will help you make the best Billys pizza in the world!</p>
+            <p className="bold">If the answer of any of these questions is "yes" - then you are just like our friend Isa! This guide is custom made and will help you make the best Billys pizza in the world.</p>
             <Button handleClick={() => navigate('/step-one')}>Let's start!</Button>
         </section>
     );

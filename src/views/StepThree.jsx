@@ -23,7 +23,7 @@ function StepThree() {
                 {isReady &&
                     <Button warning handleClick={() => setIsReady(false)}>The oven takes forever...</Button>
                 }
-                <Button handleClick={() => navigate('/step-four')}>The oven is ready!</Button>
+                <Button handleClick={() => navigate('/step-four')}>I'm ready!</Button>
             </section>
         </section>
     );
