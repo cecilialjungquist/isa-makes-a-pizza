@@ -6,9 +6,9 @@
   "homepage": "https://cecilialjungquist.github.io/isa-make-a-pizza/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
