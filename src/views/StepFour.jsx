@@ -12,10 +12,10 @@ function StepFour() {
         if (startTimer) {
 
             const deadline = Date.now() + 20 * 60 * 1000;
+
             const timer = setInterval(() => {
 
                 let time = deadline - Date.now();
-
                 setMinutes(Math.floor((time / 1000 / 60) % 60));
                 setSeconds(Math.floor((time / 1000) % 60));
     
@@ -57,7 +57,7 @@ function StepFour() {
                     <Button handleClick={toggleTimer}>Start timer!</Button>
                 }
             </section>
-            <p className="small italic">You're welcome to use a different timer if you'd prefer. Set the timer to 20 min and <Link to='/step-five'>click here</Link> when it finishes!</p>
+            <p className="small italic important">I strongly recommend you to also use the timer on your phone, since the one above does not have any sound attached to it. Set the timer for 20 min and <Link to='/step-five'>click here</Link> when it finishes!</p>
         </section>
     );
 }

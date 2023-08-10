@@ -131,6 +131,9 @@ li span {
 p.bold {
   font-weight: 700;
 }
+p.important {
+  color: rgb(102, 31, 31);
+}
 
 .landing-page p {
   padding: .5rem;
