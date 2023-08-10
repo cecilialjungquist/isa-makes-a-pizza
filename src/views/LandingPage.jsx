@@ -12,7 +12,7 @@ function LandingPage() {
             <h1>Isa Makes A Pizza!</h1>
 
             <figure>
-               <img src="/public/billys.svg" alt="Billys pizza." />
+               <img src="/billys.svg" alt="Billys pizza." />
             </figure>            
 
             <p>Are you into driving different cars every week? Are those often of brands who are completely uninteresting (for example Fiat)?</p>
