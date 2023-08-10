@@ -219,3 +219,26 @@ button:hover {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 600px) {
+  #root {
+    padding: .3rem;
+    margin: .2rem;
+  }
+
+  .landing-page h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: .3rem;
+  }
+
+  .button-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .button-container button {
+    margin: 0;
+  }
+}
