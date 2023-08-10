@@ -20,7 +20,7 @@ function LandingPage() {
                 <p>Do you hate super cute video games that is impossible to hate for everyone else (like Stardew Valley)?</p>
                 <p>Is Billys pizza a common lunch for you, often heated in the microwave because you lack skills of both patience and planning (not unlike a 6 year old kid)?</p>
 
-            <p className="bold">If the answer of any of these questions is "yes" - then you are just like our friend Isa! This guide is custom made and will help you make the best Billys pizza in the world.</p>
+            <p className="bold">If the answer to any of these questions is "yes" - then you are just like our friend Isa! This guide is custom made and will help you make the best Billys pizza in the world.</p>
             <Button handleClick={() => navigate('/step-one')}>Let's start!</Button>
         </section>
     );
